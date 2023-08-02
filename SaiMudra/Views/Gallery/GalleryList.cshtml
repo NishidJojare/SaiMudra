@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "GalleryList";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/pages/Gallery.js"></script>
+<style>
+    .x {
+        margin-top: 87px;
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js" defer="defer"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/dataTables.bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables-buttons/2.3.6/js/dataTables.buttons.min.js" defer="defer"></script>
+
+
+
+<main class="main" id="main">
+    <div class="x">
+        <table id="tblGallery" class="Fashion-TextBlock table-striped table-bordered" border="1">
+            @*<thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Video</th>
+                    <th>IsActive</th>
+                    <th>CreateDate</th>
+                    <th>Photo</th>
+                </tr>
+            </thead>
+            <tbody></tbody>*@
+        </table>
+
+    </div>
+</main>
+<div id="WriteToUsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                <h1>Write To Us &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1>
+            </div>
+
+            <div class="modal-body">
+                <main id="main" class="main">
+                    <input type="hidden" id="hdnId" />
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Gallery</h2>
+
+                            <form class="col-sm-12">
+
+                                <div class="col-sm-12">
+                                    <label class="form-label"><b>Photo</b></label>
+                                    <input class="form-control" type="file" id="file1">
+                                </div>
+                                <br />
+                                <div class="col-sm-12">
+                                    <label class="form-label"><b>Video</b></label>
+                                    <input class="form-control" type="text" id="txtVideo" placeholder="Video">
+                                </div>
+                                <br />
+                                <div class="col-sm-12">
+
+                                    <input class="form-check-input" type="checkbox" id="txtIsActive">
+                                    <label class="form-check-label">
+                                        Agree all Terms and Conditions
+                                    </label>
+
+                                </div>
+                                <div style="margin-top:20px;display:flex;justify-content:center;">
+                                    <input type="button" value="Submit" class="btn btn-primary" onclick="SaveGallery()" />
+                                    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                </div>
+                            </form><!-- End No Labels Form -->
+
+                        </div>
+
+                    </div>
+                </main>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="GalleryModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                <h1>Write To Us &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1>
+            </div>
+
+            <div class="modal-body">
+                <div class="container" id="GalleryDetail">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

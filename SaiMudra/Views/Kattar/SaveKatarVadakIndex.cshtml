@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "SaveKatarVadakIndex";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+<style>
+    .form-control {
+        border: 1px solid #858080;
+    }
+</style>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/pages/KatterVadak.js"></script>
+
+@*<h2>SaveKatarVadakIndex</h2>
+
+<input type="hidden" id="hdnId" />
+<input type="text" id="txtName" class="form-control" placeholder="Enter Name" />
+<input type="file" id="file1" class="form-control" placeholder="Enter Photo" />
+<input type="text" id="txtInstragram" class="form-control" placeholder="Enter Instagram" />
+<input type="text" id="txtFacebook" class="form-control" placeholder="Enter Facebook" />
+<input type="checkbox" id="txtIsActive" />
+<label>Agree all Term & Condition</label>
+<input type="button" value="Submit" class="btn btn-success" onclick="SaveKatterVadak()" />*@
+<main id="main" class="main">
+    <input type="hidden" id="hdnId" />
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title" style="text-align:center"><b>Register Yourself</b></h2>
+
+            <form class="row g-3">
+                <div class="col-sm-6">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Your Name" id="txtName">
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label">Upload Photo</label>
+                    <input class="form-control" type="file" id="file1">
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label">Facebook Link</label>
+                    <input type="text" class="form-control" placeholder="Facebook Link" id="txtFacebook">
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label">Instagram Link</label>
+                    <input type="text" class="form-control" placeholder="Instagram Link" id="txtInstragram">
+                </div>
+
+
+                <div class="col-sm-6" style="margin-top:30px;">
+
+                    <input class="form-check-input" type="checkbox" id="txtIsActive">
+                    <label class="form-check-label">
+                        Agree all Terms and Conditions
+                    </label>
+
+                </div>
+                <div class="text-center">
+                    <input type="button" value="Submit" class="btn btn-primary" onclick="SaveKatterVadak()" style="width:200px;"/>
+                    @*&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                    <button type="reset" class="btn btn-secondary">Reset</button>*@
+                </div>
+            </form><!-- End No Labels Form -->
+
+        </div>
+    </div>
+</main>
+

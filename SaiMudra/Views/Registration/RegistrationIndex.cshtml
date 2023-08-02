@@ -1,0 +1,139 @@
+﻿
+@{
+    ViewBag.Title = "RegistrationIndex";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+
+<style>
+    .form-control {
+        border: 1px solid #858080;
+    }
+</style>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/pages/Registration.js"></script>
+
+<!--<h2>RegistrationIndex</h2>
+
+<input type="hidden" id="hdnId" />
+<input type="text" id="txtFullName" class="form-control" placeholder="Enter FullName" />
+<input type="text" id="txtMobile" class="form-control" placeholder="Enter Mobile" />
+<input type="text" id="txtEmail" class="form-control" placeholder="Enter Email" />
+<input type="text" id="txtAge" class="form-control" placeholder="Enter Age" />
+<input type="date" id="txtDOB" class="form-control" placeholder="Enter DOB" />
+<input type="text" id="txtBloodGroup" class="form-control" placeholder="Enter BloodGroup" />
+<input type="text" id="txtAadhar" class="form-control" placeholder="Enter Aadhar" />
+<input type="text" id="txtGender" class="form-control" placeholder="Enter Gender" />
+<input type="text" id="txtAddress" class="form-control" placeholder="Enter Address" />
+<input type="text" id="txtOccupation" class="form-control" placeholder="Enter Occupation" />
+<input type="file" id="file1" class="form-control" placeholder="Enter Photo" />
+
+<input type="checkbox" id="txtIsActive" />
+<label>Agree all Term & Condition</label>-->
+@*<input type="date" id="txtCreateDate" class="form-control" placeholder="Enter CreateDate" />*@
+<!--<br />
+
+<input type="button" value="Submit" class="btn btn-success" onclick="SaveRegistration()" />-->
+
+<main id="main" class="main">
+    <input type="hidden" id="hdnId" />
+    <div class="card">
+        <div class="card-body">
+            <center><h5 class="card-title"><b>Registration Form</b></h5></center>
+
+            <!-- Multi Columns Form -->
+            <form class="row g-3">
+                <div class="col-sm-6">
+                    <b> <label for="inputName5" class="form-label">Full Name</label></b>
+                    <input type="text" id="txtFullName" class="form-control" placeholder="Enter FullName" />
+                </div>
+                <div class="col-sm-6">
+                    <b><label for="inputCity" class="form-label">Upload Photo</label></b>
+                    <input type="file" id="file1" class="form-control" placeholder="Enter Photo" />
+                </div>
+                <div class="col-sm-6">
+                    <b><label for="inputEmail5" class="form-label">Mobile</label></b>
+                    <input type="text" id="txtMobile" class="form-control" placeholder="Enter Mobile" />
+                </div>
+                <div class="col-sm-6">
+                    <b><label for="inputPassword5" class="form-label">Email</label></b>
+                    <input type="text" id="txtEmail" class="form-control" placeholder="Enter Email" />
+
+                </div>
+                <div class="col-sm-4">
+                    <b> <label for="inputAddress2" class="form-label">Date Of Birth </label></b>
+                    <input type="date" id="txtDOB" class="form-control" placeholder="Enter DOB" />
+                </div>
+                <div class="col-sm-4">
+                    <b> <label for="inputAddress5" class="form-label">Age</label></b>
+                    <input type="text" id="txtAge" class="form-control" placeholder="Enter Age" />
+                </div>
+                <div class="col-sm-4">
+                    <b> <label for="inputCity" class="form-label">BloodGroup</label></b>
+                    <input type="text" id="txtBloodGroup" class="form-control" placeholder="Enter BloodGroup" />
+                </div>
+                <div class="col-sm-2">
+                    <b> <label>Gender</label></b>
+                    <br />
+                    <label style="margin-top:10px;">
+                        <input type="radio" id="txtGender" name="Gender" value="Male" />
+                        Male
+                    </label>&nbsp; &nbsp; &nbsp;
+                    <label style="margin-top:10px;">
+                        <input type="radio" id="txtGender" name="Gender" value="Female" />
+                        Female
+                    </label>
+                </div>
+
+                <div class="col-sm-5">
+                    <b> <label for="inputCity" class="form-label">Aadhar</label></b>
+                    <input type="text" id="txtAadhar" class="form-control" placeholder="Enter Aadhar" />
+
+                </div>
+                <div class="col-sm-5">
+                    <b> <label for="inputCity" class="form-label">Occupation</label></b>
+                    <input type="text" id="txtOccupation" class="form-control" placeholder="Enter Occupation" />
+                </div>
+                <div class="col-sm-12">
+                    <b><label for="inputCity" class="form-label">Address</label></b>
+                    <textarea id="txtAddress" class="form-control" placeholder="Enter Address" rows="3"></textarea>
+                    @*<input type="text" id="txtAddress" class="form-control" placeholder="Enter Address" />*@
+
+                </div>
+
+
+
+
+                @*<div class="col-md-4">
+                        <label for="inputState" class="form-label">State</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>*@
+                @*<div class="col-md-2">
+                        <label for="inputZip" class="form-label">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>*@
+                <div class="col-sm-6" style="margin-top:30px;">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="txtIsActive">
+                        <label class="form-check-label" for="gridCheck">
+                            Agree all Terms And Conditions
+                        </label>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <input type="button" value="Submit" class="btn btn-primary" onclick="SaveRegistration()" style="width:200px;" />
+
+                </div>
+            </form><!-- End Multi Columns Form -->
+
+        </div>
+    </div>
+</main>
+
+
+
+
+
